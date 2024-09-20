@@ -13,7 +13,7 @@ int	count_words(const char *str, char c)
 		if (str[i] == c)
 		{
 			i++;
-			continue;
+			continue ;
 		}
 		words++;
 		while (!(str[i] == c) && str[i])
@@ -24,7 +24,7 @@ int	count_words(const char *str, char c)
 
 void	ft_strncpy(char *dest, const char *src, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] && i < n)
@@ -39,7 +39,7 @@ void	malloc_fill(char **arr, char const *str, char c)
 {
 	int	i;
 	int	chars;
-	int 	k;
+	int	k;
 
 	i = 0;
 	k = 0;
@@ -48,7 +48,7 @@ void	malloc_fill(char **arr, char const *str, char c)
 		if (str[i] == c)
 		{
 			i++;
-			continue;
+			continue ;
 		}
 		chars = 0;
 		while (!(str[i] == c) && str[i])
@@ -56,8 +56,8 @@ void	malloc_fill(char **arr, char const *str, char c)
 			chars++;
 			i++;
 		}
-		arr[k] = malloc(chars + 1);	
-		ft_strncpy(arr[k], str + i - chars,chars);			
+		arr[k] = malloc(chars + 1);
+		ft_strncpy(arr[k], str + i - chars, chars);
 		k++;
 	}
 }
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 
-	arr = malloc((count_words(s, c)  + 1) * sizeof(char *));
+	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
 	malloc_fill(arr, s, c);
 	arr[count_words(s, c) + 1] = 0;
 	return (arr);
