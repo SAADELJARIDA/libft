@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count_words(const char *str, char c)
+static int	count_words(const char *str, char c)
 {
 	int	i;
 	int	words;
@@ -22,7 +22,7 @@ int	count_words(const char *str, char c)
 	return (words);
 }
 
-void	ft_strncpy(char *dest, const char *src, int n)
+static void	ft_strncpy(char *dest, const char *src, int n)
 {
 	int	i;
 
@@ -35,7 +35,7 @@ void	ft_strncpy(char *dest, const char *src, int n)
 	dest[i] = '\0';
 }
 
-void	malloc_fill(char **arr, char const *str, char c)
+static void	malloc_fill(char **arr, char const *str, char c)
 {
 	int	i;
 	int	chars;

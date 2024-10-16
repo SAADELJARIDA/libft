@@ -2,14 +2,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	len;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i--;
+		if (s[len] == c)
+			return ((char *)(s + len));
+		len--;
 	}
 	return (0);
 }

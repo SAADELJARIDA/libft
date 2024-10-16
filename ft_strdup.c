@@ -2,7 +2,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	char *d;
+	char	*d;
 	size_t	sz;
 
 	sz = ft_strlen(s) + 1;

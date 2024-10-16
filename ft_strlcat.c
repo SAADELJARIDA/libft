@@ -1,5 +1,5 @@
-#include <bsd/string.h>
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -31,17 +31,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 #include <stdio.h>
 #include <string.h>
-
+#include <bsd/string.h> 
 int main() {
-   	 char dest[10] ="hello" ;
+   	 char dest[15];
   	  const char *src = " world!";
-        char ddest[10]= "hello";
+        char ddest[10];
     	const char *ssrc = " world!";
 	
-    size_t result = strlcat(dest, src, 7);
-
-    printf("After strlcat: '%s'\n", dest);
-   printf("Result length: %zu\n", result);
+	memset(dest, 0, 15);
+	memset(dest, 'r', 6);
+	dest[11] = 'a';
+		printf("a: %d\n",ft_strlcat(dest, "lorem", 15));
+		write(1, "\n", 1);
+		write(1, dest, 15);
 
 printf("------------------------------FT_STRLCAT-----------------\n");
 
