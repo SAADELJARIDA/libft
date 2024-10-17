@@ -14,29 +14,38 @@ static int	digit_nbr(int n)
 	return (count);
 }
 
+static void	to_char(char *ptr, long l, int number_of_chars)
+{
+	ptr[number_of_chars] = 0;
+	if (!l)
+		ptr[0] = '0';
+	while (l)
+	{
+		ptr[number_of_chars - 1] = l % 10 + 48;
+		l = l / 10;
+		number_of_chars--;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		number_of_digits;
+	int		number_of_chars;
+	long	l;
 
-	number_of_digits = digit_nbr(n);
-	if (n < 0)
+	l = n;
+	number_of_chars = digit_nbr(l);
+	if (l < 0)
 	{
-		number_of_digits++;
-		ptr = malloc(number_of_digits);
+		number_of_chars++;
+		ptr = malloc(number_of_chars + 1);
 		ptr[0] = '-';
-		n *= -1;
+		l *= -1;
 	}
 	else
-		ptr = malloc(number_of_digits + 1);
+		ptr = malloc(number_of_chars + 1);
 	if (!ptr)
 		return (0);
-	ptr[number_of_digits] = 0;
-	while (n)
-	{
-		ptr[number_of_digits - 1] = n % 10 + 48;
-		n = n / 10;
-		number_of_digits--;
-	}
+	to_char(ptr, l, number_of_chars);
 	return (ptr);
 }

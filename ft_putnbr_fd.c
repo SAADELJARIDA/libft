@@ -5,26 +5,28 @@ void	ft_putnbr_fd(int n, int fd)
 	int		temp;
 	int		pow;
 	char	c;
+	long	l;
 
+	l = n;
 	pow = 1;
-	if (n < 0)
+	if (l < 0)
 	{
 		write(fd, "-", 1);
-		n = -n;
+		l = -l;
 	}
-	temp = n;
+	temp = l;
 	while (temp / 10)
 	{
 		pow *= 10;
 		temp = temp / 10;
 	}
-	while (n / 10)
+	while (l / 10)
 	{
-		c = 48 + (n / pow);
+		c = 48 + (l / pow);
 		write(fd, &c, 1);
-		n = n % pow;
+		l = l % pow;
 		pow = pow / 10;
 	}
-	c = n + 48;
+	c = l + 48;
 	write(fd, &c, 1);
 }
