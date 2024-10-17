@@ -16,7 +16,7 @@ int	ft_atoi(const char *a)
 		sign = -1;
 		a++;
 	}
-	if (*a == '+')
+	else if (*a == '+')
 		a++;
 	while (ft_isdigit(*a))
 	{

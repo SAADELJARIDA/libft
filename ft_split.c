@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
 	malloc_fill(arr, s, c);
-	arr[count_words(s, c) + 1] = 0;
+	arr[count_words(s, c)] = 0;
 	return (arr);
 }
 /*
