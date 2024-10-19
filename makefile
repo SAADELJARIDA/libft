@@ -8,12 +8,11 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
        ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS = ${SRC:.c=.o}
-OBJB = ${SRCB:.c=.o}
 NAME = libft.a
 LIBC = ar rcs
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+WFLAGS = -Wall -Wextra -Werror
 
 all: ${NAME}
 
@@ -21,7 +20,7 @@ ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
 %.o: %.c
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${WFLAGS} -c $^ -o $@
 
 clean:
 	${RM} ${OBJS} ${OBJSB}
@@ -31,4 +30,3 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : all bonus clean fclean re
