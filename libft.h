@@ -4,13 +4,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct
-s_list
+typedef struct s_list
 {
-	void	*content;
+	void			*content;
 	struct s_list	*next;
-}
-t_list;
+}			t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -1,10 +1,22 @@
 #include "libft.h"
 
+void	ft_convert(long l, int fd, int pow)
+{
+	char	c;
+
+	while (pow)
+	{
+		c = 48 + (l / pow);
+		write(fd, &c, 1);
+		l = l % pow;
+		pow = pow / 10;
+	}
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	int		temp;
 	int		pow;
-	char	c;
 	long	l;
 
 	l = n;
@@ -20,13 +32,5 @@ void	ft_putnbr_fd(int n, int fd)
 		pow *= 10;
 		temp = temp / 10;
 	}
-	while (l / 10)
-	{
-		c = 48 + (l / pow);
-		write(fd, &c, 1);
-		l = l % pow;
-		pow = pow / 10;
-	}
-	c = l + 48;
-	write(fd, &c, 1);
+	ft_convert(l, fd, pow);
 }
