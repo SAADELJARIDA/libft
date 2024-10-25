@@ -10,8 +10,8 @@ int main()
 	if (test == 0)
 	{
 		printf("---------------ft_is* and ft_to* test---------------<ctype.c>\n");
-
-		printf("isalnum return : %d\n",ft_isalnum('A'));
+		for(int i = 0; i < 127 ; i++)
+		printf("isalnum return : %d the char is %c \n",ft_isalnum(i));
 
 		printf("isalpha return : %d\n",ft_isalpha('A'));
 
