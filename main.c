@@ -12,25 +12,25 @@ int main()
 		printf("---------------ft_is* and ft_to* test---------------<ctype.c>\n");
 		printf("______________________________isalnum__________________________\n");
 		for(int i = -1; i <= 129 ; i++)
-		printf("ascii :%d =  %c islalnum returns: %d\n",i,i,ft_isalnum(i));
+			printf("ascii :%d =  %c islalnum returns: %d\n",i,i,ft_isalnum(i));
 		printf("______________________________isalpha__________________________\n");
 		for(int i = -1; i <= 130 ; i++)
-		printf("ascii : %d = %c & ft_isalpha returns : %d\n",i,i,ft_isalpha(i));
+			printf("ascii : %d = %c & ft_isalpha returns : %d\n",i,i,ft_isalpha(i));
 		printf("______________________________isascii__________________________\n");
 		for(int i = -1; i <= 130 ; i++)
-		printf("ascii : %d = %c & ft_isascii returns: %d\n",i,i,ft_isascii(i));
+			printf("ascii : %d = %c & ft_isascii returns: %d\n",i,i,ft_isascii(i));
 		printf("______________________________isdigit__________________________\n");
 		for(int i = -1; i <= 130 ; i++)
-		printf("ascii : %d = %c & ft_tisdigit returns : %d\n",i,i,ft_isdigit(i));
+			printf("ascii : %d = %c & ft_tisdigit returns : %d\n",i,i,ft_isdigit(i));
 		printf("______________________________isprint__________________________\n");
 		for(int i = -1; i <= 130 ; i++)
-		printf("ascii : %d = %c & ft_isprint return : %d\n",i,i,ft_isprint(i));
+			printf("ascii : %d = %c & ft_isprint return : %d\n",i,i,ft_isprint(i));
 		printf("______________________________toupper__________________________\n");
 		for(int i = 'a'  - 3; i <= 'z' + 2 ; i++)
-		printf("ascii : %d = %c & ft_toupper return : %c\n",i,i,ft_toupper(i));
+			printf("ascii : %d = %c & ft_toupper return : %c\n",i,i,ft_toupper(i));
 		printf("______________________________isalnum__________________________\n");
 		for(int i = 'A' - 1; i <= 'Z' + 1 ; i++)
-		printf("ascii : %d = %c & ft_tolower return : %c\n",i,i,ft_tolower(i));
+			printf("ascii : %d = %c & ft_tolower return : %c\n",i,i,ft_tolower(i));
 	}
 
 	if (test == 1)
