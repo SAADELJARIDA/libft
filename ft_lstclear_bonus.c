@@ -1,21 +1,26 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 13:31:46 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/10/27 13:48:29 by sel-jari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_lstclear(t_list **lst, void (*del)(void*));
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
-	if(lst)
-	{
-		while (temp)
-		{
-			temp = *lst -> next;
-			del(lst->content);
-			free(*lst);
-			*lst -> temp;
-		}
-	}
-}
 
-int main()
-{
-	v
+	while (*lst)
+	{
+		del((*lst)->content);
+		temp = (*lst)->next;
+		free(*lst);
+		*lst = temp;
+	}
 }

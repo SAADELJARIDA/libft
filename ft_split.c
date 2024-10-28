@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 13:41:51 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/10/27 23:41:17 by sel-jari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -67,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
 	malloc_fill(arr, s, c);
 	arr[count_words(s, c)] = 0;
 	return (arr);
