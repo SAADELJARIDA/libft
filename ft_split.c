@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:41:51 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 23:41:17 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:16:10 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,25 @@ static void	ft_strncpy(char *dest, const char *src, int n)
 	dest[i] = '\0';
 }
 
-static void	malloc_fill(char **arr, char const *str, char c)
+static int	find_and_count(char const *str, char c, int *i)
+{
+	int	chars;
+
+	if (str[*i] == c)
+	{
+		(*i)++;
+		return (-1);
+	}
+	chars = 0;
+	while (!(str[*i] == c) && str[*i])
+	{
+		chars++;
+		(*i)++;
+	}
+	return (chars);
+}
+
+static int	malloc_fill(char **arr, char const *str, char c)
 {
 	int	i;
 	int	chars;
@@ -57,21 +75,22 @@ static void	malloc_fill(char **arr, char const *str, char c)
 	k = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
-		{
-			i++;
+		chars = find_and_count(str, c, &i);
+		if (chars == -1)
 			continue ;
-		}
-		chars = 0;
-		while (!(str[i] == c) && str[i])
-		{
-			chars++;
-			i++;
-		}
 		arr[k] = malloc(chars + 1);
+		if (arr[k] == 0)
+		{
+			i = 0;
+			while (i < k)
+				free(arr[i++]);
+			free(arr);
+			return (0);
+		}
 		ft_strncpy(arr[k], str + i - chars, chars);
 		k++;
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -81,7 +100,8 @@ char	**ft_split(char const *s, char c)
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);
-	malloc_fill(arr, s, c);
+	if (!malloc_fill(arr, s, c))
+		return (NULL);
 	arr[count_words(s, c)] = 0;
 	return (arr);
 }

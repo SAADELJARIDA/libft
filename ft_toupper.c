@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:40:45 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 13:40:46 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:38:59 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*
-#include<stdio.h>
-int main()
-{
-	printf("%c",ft_toupper('c'));
-}*/

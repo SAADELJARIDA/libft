@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:42:23 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 13:42:24 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:39:37 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-/*
-#include <stdio.h>
-#include <bsd/string.h> 
-int main() {
-	
-	char aa[140] = "salam labas" ;
-	char bb[140] = "hanya bekher" ;
- 	ft_strlcpy(aa,bb,0);
-}*/

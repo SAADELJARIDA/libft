@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:41:57 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/28 18:49:23 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/10/30 14:28:30 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (0);
 	if (start >= ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
 	if (ft_strlen(s) <= len - start)

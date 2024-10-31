@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:45:48 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 13:45:49 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:38:27 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end + 1 - start));
 }
-/*
-#include<stdio.h>
-
-int main()
-{
-	char a[] = "----------";
-	char b[] = "-";
-	printf("%s",ft_strtrim(a,b));
-}
-*/
