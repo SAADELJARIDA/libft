@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:42:43 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/28 17:41:31 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:40:19 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	while (len >= 0)
 	{

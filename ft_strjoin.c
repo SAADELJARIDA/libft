@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:45:25 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/30 14:17:46 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:34:36 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ptr;
 	size_t	i;
 
+	if (!s1 || !s2)
+		return (0);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	ptr = malloc(s1_len + s2_len + 1);

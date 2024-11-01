@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:45:48 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/30 18:38:27 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:42:19 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	start;
 	int	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	end = ft_strlen(s1) - 1;
 	start = 0;
 	while (s1[start] && is_it(s1[start], set))

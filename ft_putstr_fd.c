@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:43:23 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 13:43:27 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:21:09 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	while (*s && s)
 	{
 		write(fd, s, 1);
 		s++;

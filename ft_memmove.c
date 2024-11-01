@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:40:26 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/30 18:40:24 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 07:47:37 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	if (!dest && !src)
+		return (NULL);
 	if (dest <= src)
 		ft_memcpy(dest, src, n);
 	else

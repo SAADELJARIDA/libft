@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:41:51 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/30 11:16:10 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:30:49 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 
+	if (!s)
+		return (NULL);
 	arr = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);

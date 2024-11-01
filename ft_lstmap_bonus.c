@@ -6,7 +6,7 @@
 /*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:41:02 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/30 18:40:53 by sel-jari         ###   ########.fr       */
+/*   Updated: 2024/11/01 08:11:33 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_head;
 
 	new_head = NULL;
-	new = new_head;
-	while (lst)
+	while (lst && f && del)
 	{
 		new = ft_lstnew(f(lst->content));
 		if (!new)
