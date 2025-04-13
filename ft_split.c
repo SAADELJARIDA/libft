@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:41:51 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/11/01 08:30:49 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:42:59 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 22:43:10 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	count_words(const char *str, char c)
 {
